@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pod Maslinom | Luksusowy odpoczynek w naturze | Orašac, Dubrownik</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+
+    <!-- Luxury Navigation -->
+    <nav id="mainNav">
+        <a href="index_pl.html" class="nav-brand">
+            <img src="favicon.ico" alt="Logo">
+            POD MASLINOM
+        </a>
+        <div class="menu-toggle" id="mobileMenu">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index_pl.html" class="active">Start</a></li>
+            <li><a href="mapa_pl.html">Mapa</a></li>
+            <li><a href="cjenik_pl.html">Cennik</a></li>
+            <li><a href="galerija_pl.html">Zdjęcia</a></li>
+            <li><a href="dojmovi_pl.html">Opinie</a></li>
+            <li><a href="kontakt_pl.html">Kontakt</a></li>
+        </ul>
+        <div class="lang-switch">
+            <a href="index.html">HR</a>
+            <a href="index_en.html">EN</a>
+            <a href="index_de.html">DE</a>
+            <a href="index_fr.html">FR</a>
+            <a href="index_pl.html" class="active">PL</a>
+            <a href="index_it.html">IT</a>
+        </div>
+    </nav>
+
+    <!-- Fullscreen Hero -->
+    <header class="hero-full">
+        <div class="hero-img"><img src="images/hero.jpg" alt="Obóz Pod maslinom"></div>
+        <div class="hero-content">
+            <p class="caps-small" style="margin-bottom: 2rem;">Natura to najwyższy luksus</p>
+            <h1>Witamy . . .</h1>
+            <p style="margin-bottom: 2rem;">Auto-camp "Pod maslinom" – Twój spokojny azyl w sercu dalmatyńskiego krajobrazu, blisko krystalicznie czystego morza i historycznego Dubrownika.</p>
+            <a href="#about" class="btn-premium">Odkryj więcej</a>
+        </div>
+    </header>
+
+    <!-- Summary Section -->
+    <section id="about" class="section">
+        <div class="container-narrow" style="text-align: center;">
+            <p class="meta-info">O nas / Od 2001</p>
+            <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2rem;">Twój cichy kąt pod baldachimem stuletnich drzew oliwnych.</h2>
+            <p class="reveal-text">Auto-camp <b>"Pod maslinom"</b> znajduje się 11 km na zachód od najsłynniejszego miasta na wybrzeżu Adriatyku, Dubrownika, w pięknej śródziemnomorskiej wiosce <b>Orašac</b>.</p>
+        </div>
+    </section>
+
+    <!-- Grid Content -->
+    <section class="section" style="background: var(--brand-stone); padding-top: 15vh; padding-bottom: 15vh;">
+        <div class="container-wide">
+            <div class="grid-2">
+                <div class="img-reveal" style="height: 600px;"><img src="images/k4.jpg" alt="Camp"></div>
+                <div>
+                    <p class="meta-info">Lokalizacja i pojemność</p>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Poczuj śródziemnomorski klimat na każdym kroku.</h3>
+                    <p>Zajmuje około <b>8000 m<sup>2</sup></b> powierzchni, czyli <b>50 miejsc kempingowych</b> pod drzewami oliwnymi, skąd wzięła się nazwa kempingu. Ścieżka przez sosnowy las prowadzi w <b>3 minuty</b> do <b>2 żwirowych plaż</b> i przystani dla łodzi.</p>
+                    <p>W wiosce znajdują się również dwa miniamrkety, poczta, przychodnia, boiska do bocce, szkoła z boiskami do piłki nożnej i koszykówki oraz ogród botaniczny. Kemping został gruntownie odnowiony w 2001 roku.</p>
+                    <p style="margin-top: 2rem; font-family: var(--mono); font-size: 0.8rem;">
+                        <img src="favicon.ico" width="16" style="vertical-align: middle;"> <b>350m</b> do plaży
+                        <img src="favicon.ico" width="16" style="vertical-align: middle;"> <b>11 km</b> do Dubrownika
+                    </p>
+                    <a href="galerija_pl.html" class="btn-premium btn-outline" style="margin-top: 2rem;">Zobacz Galerię</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            <p class="caps-small">&copy; 2025 Auto-camp Pod maslinom. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+        const nav = document.getElementById('mainNav');
+        mobileMenu.addEventListener('click', () => { navLinks.classList.toggle('mobile-open'); });
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
+    </script>
+</body>
+</html>

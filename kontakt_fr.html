@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Auto Kamp Pod Maslinom Orašac</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <style>
+        .hero-sub { height: 40vh; }
+        .hero-img img { filter: brightness(0.6); }
+        .form-luxury input, .form-luxury textarea {
+            width: 100%;
+            padding: 20px 0;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--brand-charcoal);
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+        .form-luxury input:focus, .form-luxury textarea:focus { border-bottom-width: 2px; }
+    </style>
+</head>
+<body style="background: var(--brand-beige);">
+
+    <!-- Luxury Navigation -->
+    <nav id="mainNav">
+        <a href="index_fr.html" class="nav-brand">
+            <img src="favicon.ico" alt="Logo">
+            POD MASLINOM
+        </a>
+        <div class="menu-toggle" id="mobileMenu">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index_fr.html">Accueil</a></li>
+            <li><a href="mapa_fr.html">Carte</a></li>
+            <li><a href="cjenik_fr.html">Tarifs</a></li>
+            <li><a href="galerija_fr.html">Photos</a></li>
+            <li><a href="dojmovi_fr.html">Impressions</a></li>
+            <li><a href="kontakt_fr.html" class="active">Contact</a></li>
+        </ul>
+        <div class="lang-switch">
+             <a href="kontakt.html">HR</a>
+             <a href="kontakt_en.html">EN</a>
+             <a href="kontakt_de.html">DE</a>
+             <a href="kontakt_fr.html" class="active">FR</a>
+             <a href="kontakt_pl.html">PL</a>
+             <a href="kontakt_it.html">IT</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="hero-sub" style="height: 40vh;">
+        <div class="hero-img"><img src="images/plaza_header.jpg" alt="Plaza Header"></div>
+        <div class="container-wide" style="position: relative; z-index: 10; padding-bottom: 5vh; color: white; padding-left: 5%;">
+             <h1>Contactez-nous.</h1>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="section">
+        <div class="container-narrow">
+            <h2 style="font-size: 2.5rem; margin-bottom: 4rem;">Nous sommes ouverts à toutes vos questions.</h2>
+            
+            <div class="grid-2" style="align-items: flex-start;">
+                <div>
+                    <p class="meta-info">Détails du Camp</p>
+                    <p style="font-size: 1.5rem; margin-bottom: 2rem;">Auto Camp <br>POD MASLINOM</p>
+                    <p style="margin-bottom: 0;">Donja banda 7C <br>20234 Orašac - CROATIE</p>
+                    <p style="margin-top: 2rem; font-weight: 600;">tél: +385 20 891 169</p>
+                    <p style="font-weight: 600;">mob: +385 98 344 226</p>
+                    <p style="margin-top: 10px;"><a href="mailto:bozo@orasac.com" style="color: var(--brand-olive);">bozo@orasac.com</a></p>
+                </div>
+
+                <div class="form-luxury">
+                    <p class="meta-info">Envoyer une demande / Formulaire de contact</p>
+                    <form action="mailto:bozo@orasac.com" method="POST" enctype="text/plain">
+                        <input type="text" name="name" placeholder="VOTRE NOM*" required>
+                        <input type="email" name="email" placeholder="ADRESSE E-MAIL*" required>
+                        <input type="text" name="tel" placeholder="NUMÉRO DE MOBILE">
+                        <textarea name="comments" placeholder="VOS COMMENTAIRES*" rows="4" required></textarea>
+                        <button type="submit" class="btn-premium" style="width: 100%; text-align: center;">Envoyer le Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Content -->
+    <footer>
+        <div class="footer-bottom">
+            <p class="caps-small">&copy; 2025 Auto-camp Pod maslinom.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+        const nav = document.getElementById('mainNav');
+        mobileMenu.addEventListener('click', () => { navLinks.classList.toggle('mobile-open'); });
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
+    </script>
+</body>
+</html>

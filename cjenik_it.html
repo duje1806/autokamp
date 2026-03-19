@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tariffe | Auto Kamp Pod Maslinom Orašac</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+</head>
+<body style="background: var(--white);">
+
+    <!-- Luxury Navigation -->
+    <nav id="mainNav">
+        <a href="index_it.html" class="nav-brand">
+            <img src="favicon.ico" alt="Logo">
+            POD MASLINOM
+        </a>
+        <div class="menu-toggle" id="mobileMenu">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index_it.html">Home</a></li>
+            <li><a href="mapa_it.html">Mappa</a></li>
+            <li><a href="cjenik_it.html" class="active">Tariffe</a></li>
+            <li><a href="galerija_it.html">Foto</a></li>
+            <li><a href="dojmovi_it.html">Opinioni</a></li>
+            <li><a href="kontakt_it.html">Contatti</a></li>
+        </ul>
+        <div class="lang-switch">
+            <a href="cjenik.html">HR</a>
+            <a href="cjenik_en.html">EN</a>
+            <a href="cjenik_de.html">DE</a>
+            <a href="cjenik_fr.html">FR</a>
+            <a href="cjenik_pl.html">PL</a>
+            <a href="cjenik_it.html" class="active">IT</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="hero-sub" style="height: 50vh;">
+        <div class="hero-img"><img src="images/maslina.jpg" alt="Olivo"></div>
+        <div class="container-wide" style="position: relative; z-index: 10; padding: 0 5%; color: white;">
+            <p class="caps-small" style="margin-bottom: 1rem;">Tariffe Stagionali 2025</p>
+            <h1>Prezzi dei servizi del campo.</h1>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="section">
+        <div class="container-narrow">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Servizio premium, prezzi trasparenti.</h2>
+            <p style="margin-bottom: 4rem;">Vi presentiamo una panoramica di tutti i servizi e le tariffe per la stagione 2025, suddivisi in Stagione A e Stagione B a seconda del periodo della vostra visita.</p>
+            
+            <p class="meta-info">Panoramica Stagionale</p>
+            <table class="table-luxury">
+                <thead>
+                    <tr>
+                        <th style="padding: 20px 0; border-bottom: 2px solid var(--brand-charcoal);">SERVIZIO</th>
+                        <th style="padding: 20px 0; border-bottom: 2px solid var(--brand-charcoal); color: #6AC335;">Stagione A</th>
+                        <th style="padding: 20px 0; border-bottom: 2px solid var(--brand-charcoal); color: #FF9834;">Stagione B</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><b>Persona</b></td><td>8,05 €</td><td>11,05 €</td></tr>
+                    <tr><td><b>Bambino (3-12 anni)</b></td><td>4,00 €</td><td>6,00 €</td></tr>
+                    <tr><td><b>Ragazzo (12-18 anni)</b></td><td>5,02 €</td><td>7,02 €</td></tr>
+                    <tr><td><b>Tassa di soggiorno*</b></td><td>1,95 €</td><td>1,95 €</td></tr>
+                    <tr><td><b>Tenda piccola (S)</b></td><td>5,00 €</td><td>6,00 €</td></tr>
+                    <tr><td><b>Tenda grande (L)</b></td><td>6,00 €</td><td>8,00 €</td></tr>
+                    <tr><td><b>Auto</b></td><td>4,00 €</td><td>5,00 €</td></tr>
+                    <tr><td><b>Van</b></td><td>9,00 €</td><td>10,00 €</td></tr>
+                    <tr><td><b>Camper</b></td><td>10,00 €</td><td>12,00 €</td></tr>
+                    <tr><td><b>Elettricità 220V</b></td><td>4,00 €</td><td>4,00 €</td></tr>
+                    <tr><td><b>Cane</b></td><td>1,00 €</td><td>1,00 €</td></tr>
+                    <tr><td><b>Lavatrice</b></td><td>4,00 €</td><td>4,00 €</td></tr>
+                </tbody>
+            </table>
+
+            <div style="margin-top: 4rem; padding: 40px; border: 1px solid var(--brand-stone); background: var(--brand-beige);">
+                <p class="caps-small" style="color: #CC0000; margin-bottom: 1rem;">Nota</p>
+                <p style="font-family: var(--serif); font-size: 1.25rem;">I prezzi possono variare senza preavviso!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Content -->
+    <footer>
+        <div class="footer-bottom">
+            <p class="caps-small">&copy; 2025 Auto-camp Pod maslinom.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+        const nav = document.getElementById('mainNav');
+        mobileMenu.addEventListener('click', () => { navLinks.classList.toggle('mobile-open'); });
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
+    </script>
+</body>
+</html>
