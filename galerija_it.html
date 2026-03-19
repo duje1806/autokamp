@@ -9,6 +9,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="global.css">
+    <style>
+        .hero-sub { height: 40vh; }
+        .hero-img img { filter: brightness(0.6); }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        @media (max-width: 1024px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+        .img-reveal {
+            aspect-ratio: 3/2;
+            overflow: hidden;
+            border-radius: 2px;
+        }
+        .img-reveal img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+    </style>
 </head>
 <body style="background: var(--brand-beige);">
 
@@ -24,10 +50,10 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="index_it.html">Home</a></li>
             <li><a href="mapa_it.html">Mappa</a></li>
-            <li><a href="cjenik_it.html">Tariffe</a></li>
+            <li><a href="cjenik_it.html">Prezzi</a></li>
             <li><a href="galerija_it.html" class="active">Foto</a></li>
-            <li><a href="dojmovi_it.html">Opinioni</a></li>
-            <li><a href="kontakt_it.html">Contatti</a></li>
+            <li><a href="dojmovi_it.html">Impressioni</a></li>
+            <li><a href="kontakt_it.html">Contatto</a></li>
         </ul>
         <div class="lang-switch">
              <a href="galerija.html">HR</a>
@@ -41,26 +67,31 @@
 
     <!-- Header Section -->
     <header class="hero-sub" style="align-items: center; padding-bottom: 0;">
-        <div class="hero-img"><img src="images/photo_g.jpg" alt="Galleria Foto"></div>
+        <div class="hero-img"><img src="images/photo_g.jpg" alt="Galleria fotografica"></div>
         <div class="container-wide" style="position: relative; z-index: 10; text-align: center; color: white;">
-            <h1>Galleria Foto.</h1>
+            <h1>Galleria fotografica.</h1>
         </div>
     </header>
 
     <!-- Main Content Section -->
     <section class="section">
         <div class="container-wide">
-            <p class="meta-info">Vista del campeggio</p>
+            <p class="meta-info">Vista del campo</p>
             <h2 style="font-size: 2.5rem; margin-bottom: 4rem;">Orašac attraverso l'obiettivo del nostro campo.</h2>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px;">
-                <div class="img-reveal" style="aspect-ratio: 1/1;"><img src="images/1m.jpg" alt="1"></div>
-                <!-- Maintaining structure while keeping it concise -->
-                <div class="img-reveal" style="aspect-ratio: 16/9; grid-column: span 2;"><img src="images/2m.jpg" alt="2"></div>
-                <div class="img-reveal" style="aspect-ratio: 4/5;"><img src="images/3m.jpg" alt="3"></div>
-                <div class="img-reveal" style="aspect-ratio: 1/1;"><img src="images/4m.jpg" alt="4"></div>
-                <div class="img-reveal" style="aspect-ratio: 1/1;"><img src="images/5m.jpg" alt="5"></div>
-                <div class="img-reveal" style="aspect-ratio: 16/9; grid-column: span 2;"><img src="images/k4.jpg" alt="Kamp"></div>
+            <div class="gallery-grid">
+                <div class="img-reveal"><img src="images/1m.jpg" alt="1"></div>
+                <div class="img-reveal"><img src="images/2m.jpg" alt="2"></div>
+                <div class="img-reveal"><img src="images/3m.jpg" alt="3"></div>
+                <div class="img-reveal"><img src="images/4m.jpg" alt="4"></div>
+                <div class="img-reveal"><img src="images/5m.jpg" alt="5"></div>
+                <div class="img-reveal"><img src="images/k4.jpg" alt="Campo"></div>
+                <div class="img-reveal"><img src="images/plaza1.jpg" alt="Spiaggia"></div>
+                <div class="img-reveal"><img src="images/dbk6.jpg" alt="Dubrovnik"></div>
+                <div class="img-reveal"><img src="images/more.jpg" alt="Mare"></div>
+                <div class="img-reveal"><img src="images/crkva.jpg" alt="Chiesa"></div>
+                <div class="img-reveal"><img src="images/panorama.jpg" alt="Panorama"></div>
+                <div class="img-reveal"><img src="images/hero.jpg" alt="Hero"></div>
             </div>
         </div>
     </section>
